@@ -1,3 +1,35 @@
+<?php
+session_start();
+
+if (isset($_SESSION['utente']) && is_array($_SESSION['utente'])) {
+  echo '<table id="tableUser" class="table table-success table-hover text-center mt-5">
+      <thead>
+          <tr>
+              <th scope="col">FirstName</th>
+              <th scope="col">LastName</th>
+              <th scope="col">Username</th>
+              <th scope="col">Email</th>
+              <th scope="col">City</th>
+              <th scope="col">User Image</th>
+          </tr>
+      </thead>
+      <tbody>
+          <tr>';
+          foreach ($_SESSION['utente'] as $key => $value) {
+            if ($key === 'miofile') {
+                echo '<td><img id="tableImg" src="files/' . $value . '" alt="User Image"></td>';
+            } else {
+                echo '<td>' . $value . '</td>';
+            }
+        }
+        echo '</tr>
+            </tbody>
+        </table>';
+    }
+
+session_write_close();
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -64,39 +96,6 @@ margin: 0 15%;
           <button class="btn btn-success" type="submit">Submit form</button>
         </div>
       </form>
-
-      <?php
-session_start();
-
-// Controlla se $_SESSION è impostato e contiene l'array desiderato
-if (isset($_SESSION['utente']) && is_array($_SESSION['utente'])) {
-  echo '<table id="tableUser" class="table table-success table-hover text-center mt-5">
-      <thead>
-          <tr>
-              <th scope="col">FirstName</th>
-              <th scope="col">LastName</th>
-              <th scope="col">Username</th>
-              <th scope="col">Email</th>
-              <th scope="col">City</th>
-              <th scope="col">User Image</th>
-          </tr>
-      </thead>
-      <tbody>
-          <tr>';
-          foreach ($_SESSION['utente'] as $key => $value) {
-            if ($key === 'miofile') {
-                echo '<td><img id="tableImg" src="files/' . $value . '" alt="User Image"></td>';
-            } else {
-                echo '<td>' . $value . '</td>';
-            }
-        }
-        echo '</tr>
-            </tbody>
-        </table>';
-    }
-
-session_write_close();
-?>
 
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>

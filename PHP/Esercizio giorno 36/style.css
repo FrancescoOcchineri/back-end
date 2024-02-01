@@ -1,0 +1,19 @@
+#customForm {
+    margin: 0 15rem;
+    margin-top: 4rem;
+    padding: 2rem 2rem;
+    background-color: rgb(158, 243, 167);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.378);
+}
+
+#customInput:hover {
+    border: 1px solid green !important;
+}
+
+#invalidCheck {
+    background-color: green;
+}
+
+#tableImg {
+    width: 5rem;
+}

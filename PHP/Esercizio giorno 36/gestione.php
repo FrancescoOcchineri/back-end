@@ -1,11 +1,15 @@
 <?php
-if ($_SERVER['REQUEST_METHOD'] === 'POST' &&
+session_start();
+
+if (
+    $_SERVER['REQUEST_METHOD'] === 'POST' &&
     isset($_POST['firstname']) &&
     isset($_POST['lastname']) &&
     isset($_POST['username']) &&
     isset($_POST['email']) &&
     isset($_POST['city']) &&
-    isset($_FILES['miofile'])) {
+    isset($_FILES['miofile'])
+) {
 
     echo '<h1> Post: ' .
         $_POST['firstname'] . ' ' .
@@ -13,7 +17,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' &&
         $_POST['username'] . ' ' .
         $_POST['email'] . ' ' .
         $_POST['city'] . ' ' .
-        $_FILES['miofile']['name'] . 
+        $_FILES['miofile']['name'] .
         '</h1>';
 }
 
@@ -23,16 +27,16 @@ $file_type = $_FILES['miofile']['type'];
 
 $target_dir = 'files/';
 
-if(!empty($_FILES['miofile'])) {
+if (!empty($_FILES['miofile'])) {
     echo '<h3>File Name: ' . $file_name . '</h3>';
     echo '<h3>File Type: ' . $file_type . '</h3>';
     echo '<h3>File Size: ' . $file_size . '</h3>';
-    if($file_type === "image/png") {
-        if($file_size < 20000) {
-            if(is_uploaded_file($_FILES["miofile"]["tmp_name"]) && $_FILES["miofile"]["error"] === UPLOAD_ERR_OK) {
-                if(move_uploaded_file($_FILES['miofile']["tmp_name"], $target_dir.$file_name)) {
-                    echo "Caricamento avvenuto con successo";  
-                }  else {
+    if ($file_type === "image/png") {
+        if ($file_size < 200000) {
+            if (is_uploaded_file($_FILES["miofile"]["tmp_name"]) && $_FILES["miofile"]["error"] === UPLOAD_ERR_OK) {
+                if (move_uploaded_file($_FILES['miofile']["tmp_name"], $target_dir . $file_name)) {
+                    echo "Caricamento avvenuto con successo";
+                } else {
                     echo "Caricamento fallito";
                 }
             }
@@ -50,14 +54,14 @@ $utente = [
     'username' => $_POST['username'],
     'email' => $_POST['email'],
     'city' => $_POST['city'],
-    'miofile' => $_FILES['miofile']['name'],
+    'miofile' => 'files/' . $_FILES['miofile']['name'],
 ];
 
-session_start();
-$_SESSION['utente'] = $utente;
+$utenti = isset($_SESSION['utenti']) ? $_SESSION['utenti'] : [];
+
+$_SESSION['utenti'] = [...$utenti, $utente];
 
 session_write_close();
-var_dump($_SESSION);
 
-header('Location: http://localhost/PHP/Pratica/Esercizio%20giorno%2036/form.php');
+header('Location: http://localhost/PHP/Esercizi%20php/Esercizio%20giorno%2036/form.php');
 ?>

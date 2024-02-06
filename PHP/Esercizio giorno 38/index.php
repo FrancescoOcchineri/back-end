@@ -1,29 +1,5 @@
 <?php
-require 'config.php';
-
-$mysqli = new mysqli(
-    $config['mysql_host'],
-    $config['mysql_user'],
-    $config['mysql_password'],
-    $config['mysql_database']
-);
-
-if ($mysqli->connect_error) {
-    die($mysqli->connect_error);
-}
-
-$sql = "SELECT * FROM utentitab";
-$res = $mysqli->query($sql);
-
-if (!$res) {
-    die($mysqli->error);
-}
-
-$result = array();
-while ($row = $res->fetch_assoc()) {
-    array_push($result, $row);
-}
-
+require 'controller.php';
 ?>
 
 <?php include 'header.php'; ?>

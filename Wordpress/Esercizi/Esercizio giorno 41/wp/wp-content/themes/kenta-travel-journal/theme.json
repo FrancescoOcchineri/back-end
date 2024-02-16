@@ -1,0 +1,197 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/theme.json",
+  "version": 2,
+  "settings": {
+    "appearanceTools": true,
+    "layout": {
+      "contentSize": "1140px",
+      "wideSize": "1200px"
+    },
+    "typography": {
+      "dropCap": true,
+      "fluid": true,
+      "fontFamilies": [
+        {
+          "fontFace": [
+            {
+              "fontFamily": "Inter",
+              "fontStretch": "normal",
+              "fontStyle": "normal",
+              "fontWeight": "400",
+              "src": ["file:./assets/fonts/inter/Inter-Regular.ttf"]
+            },
+            {
+              "fontFamily": "Inter",
+              "fontStretch": "normal",
+              "fontStyle": "medium",
+              "fontWeight": "500",
+              "src": ["file:./assets/fonts/inter/Inter-Medium.ttf"]
+            },
+            {
+              "fontFamily": "Inter",
+              "fontStretch": "normal",
+              "fontStyle": "semibold",
+              "fontWeight": "600",
+              "src": ["file:./assets/fonts/inter/Inter-SemiBold.ttf"]
+            },
+            {
+              "fontFamily": "Inter",
+              "fontStretch": "normal",
+              "fontStyle": "bold",
+              "fontWeight": "700",
+              "src": ["file:./assets/fonts/inter/Inter-Bold.ttf"]
+            }
+          ],
+          "fontFamily": "\"Inter\", sans-serif",
+          "name": "Inter",
+          "slug": "inter"
+        },
+        {
+          "fontFace": [
+            {
+              "fontFamily": "Lisu Bosa",
+              "fontStretch": "normal",
+              "fontStyle": "normal",
+              "fontWeight": "400",
+              "src": ["file:./assets/fonts/lisu-bosa/LisuBosa-Regular.ttf"]
+            },
+            {
+              "fontFamily": "Lisu Bosa",
+              "fontStretch": "normal",
+              "fontStyle": "medium",
+              "fontWeight": "500",
+              "src": ["file:./assets/fonts/inter/Inter-Medium.ttf"]
+            },
+            {
+              "fontFamily": "Lisu Bosa",
+              "fontStretch": "normal",
+              "fontStyle": "semibold",
+              "fontWeight": "600",
+              "src": ["file:./assets/fonts/inter/Inter-SemiBold.ttf"]
+            },
+            {
+              "fontFamily": "Lisu Bosa",
+              "fontStretch": "normal",
+              "fontStyle": "bold",
+              "fontWeight": "700",
+              "src": ["file:./assets/fonts/lisu-bosa/LisuBosa-Bold.ttf"]
+            }
+          ],
+          "fontFamily": "'Lisu Bosa', Serif",
+          "name": "Lisu Bosa",
+          "slug": "lisubosa"
+        },
+        {
+          "fontFace": [
+            {
+              "fontFamily": "Paytone One",
+              "fontStretch": "normal",
+              "fontStyle": "normal",
+              "fontWeight": "400",
+              "src": ["file:./assets/fonts/paytone-one/PaytoneOne-Regular.ttf"]
+            }
+          ],
+          "fontFamily": "'Paytone One', Serif",
+          "name": "PaytoneOne",
+          "slug": "paytoneone"
+        }
+      ],
+      "fontSizes": [
+        {
+          "fluid": {
+            "min": "10px",
+            "max": "12px"
+          },
+          "name": "Tiny",
+          "size": "12px",
+          "slug": "ktj-font-tiny"
+        },
+        {
+          "fluid": {
+            "min": "12px",
+            "max": "14px"
+          },
+          "name": "XXSmall",
+          "size": "14px",
+          "slug": "ktj-font-xxsmall"
+        },
+        {
+          "fluid": {
+            "min": "14px",
+            "max": "16px"
+          },
+          "name": "XSmall",
+          "size": "16px",
+          "slug": "ktj-font-xsmall"
+        },
+        {
+          "fluid": {
+            "min": "16px",
+            "max": "18px"
+          },
+          "name": "Small",
+          "size": "18px",
+          "slug": "ktj-font-small"
+        },
+        {
+          "fluid": {
+            "min": "18px",
+            "max": "20px"
+          },
+          "name": "Medium",
+          "size": "22px",
+          "slug": "ktj-font-medium"
+        },
+        {
+          "fluid": {
+            "min": "24px",
+            "max": "32px"
+          },
+          "name": "Large",
+          "size": "32px",
+          "slug": "ktj-font-large"
+        },
+        {
+          "fluid": {
+            "min": "32px",
+            "max": "48px"
+          },
+          "name": "XLarge",
+          "size": "48px",
+          "slug": "ktj-font-xlarge"
+        },
+        {
+          "fluid": {
+            "min": "40px",
+            "max": "64px"
+          },
+          "name": "XXLarge",
+          "size": "64px",
+          "slug": "ktj-font-xxlarge"
+        }
+      ]
+    }
+  },
+  "styles": {
+    "blocks": {
+      "core/heading": {
+        "typography": {
+          "fontFamily": "var(--wp--preset--font-family--paytoneone)",
+          "fontWeight": "600"
+        },
+        "color": {
+          "text": "var(--wp--preset--color--mono-1)"
+        }
+      },
+      "core/post-title": {
+        "typography": {
+          "fontFamily": "var(--wp--preset--font-family--paytoneone)",
+          "fontWeight": "600"
+        },
+        "color": {
+          "text": "var(--wp--preset--color--mono-1)"
+        }
+      }
+    }
+  }
+}

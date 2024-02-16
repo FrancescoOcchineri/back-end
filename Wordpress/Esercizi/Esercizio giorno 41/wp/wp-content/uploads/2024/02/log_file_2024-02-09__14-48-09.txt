@@ -1,0 +1,26 @@
+
+---Importing widgets---
+Primary Sidebar : 
+
+Blocco - No Title - Widget already exists
+Blocco - No Title - Imported
+Blocco - No Title - Imported
+
+Store Sidebar : 
+
+Blocco - No Title - Imported
+Blocco - No Title - Imported
+
+Widgets Area #1 : 
+
+Testo - Find Us - Imported
+
+Widgets Area #2 : 
+
+Testo - About This Site - Imported
+
+Widgets Area #3 : 
+
+Cerca - Search - Imported
+
+
